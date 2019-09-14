@@ -1,0 +1,28 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "Friend Finder",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hippopattymus/FriendFinder.git"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "Connor Paxton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hippopattymus/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/Hippopattymus/FriendFinder#readme"
+}
