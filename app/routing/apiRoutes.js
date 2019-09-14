@@ -16,20 +16,21 @@ module.exports = function(app) {
     var userScores = userData.scores;
     var totalDifference = 0;
 
-    for (var i = 0; i < friends.length - 1; i++) {
+    for (var i = 0; i < friends.length; i++) {
       console.log(friends[i].name);
       totalDifference = 0;
 
-      for (var j = 0; j < 10; j++) {
+      for (var j = 0; j < userScores.length; j++) {
         totalDifference += Math.abs(
           parseInt(userScores[j]) - parseInt(friends[i].scores[j])
         );
-        if (totalDifference <= bestMatch.difference) {
-          bestMatch.name = friends[i].name;
-          bestMatch.photo = friends[i].photo;
-          bestMatch.difference = totalDifference;
-        }
       }
+      if (totalDifference < bestMatch.difference) {
+        bestMatch.name = friends[i].name;
+        bestMatch.photo = friends[i].photo;
+        bestMatch.difference = totalDifference;
+      }
+      console.log(totalDifference);
     }
     friends.push(userData);
     res.json(bestMatch);

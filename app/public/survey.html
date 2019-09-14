@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Friend Finder Pro</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+    />
+
+    <!-- Including Font Awesome Icons -->
+    <script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
+
+    <!-- Link to reset stylesheet -->
+    <!-- <link rel="stylesheet" href="/assets/reset.css" /> -->
+
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Compiled and minified Materialize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"
+    />
+
+    <!-- Compiled and minified Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="nav-wrapper blue accent-2">
+          <i
+            class="fa fa-facebook-square fa-4x"
+            aria-hidden="true"
+            id="logo-icon"
+          ></i>
+          <a href="/" class="brand-logo" id="logo">Friend Finder</a>
+          <ul class="right hide-on-med-and-down" id="head-nav-links">
+            <li><a href="/survey">Survey</a></li>
+            <li><a href="/api/friends">API Friends List</a></li>
+            <li>
+              <a href="https://github.com/angrbrd/friend-finder">GitHub Repo</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col s12 z-depth-5 mainpanel">
+            <div id="mainpanel-content">
+              <h1>Survey Questions</h1>
+              <div class="divider"></div>
+
+              <h3>About You</h3>
+
+              <div class="input-field col s6">
+                <h5>Name (Required)</h5>
+                <i class="material-icons prefix">account_circle</i>
+                <input
+                  type="text"
+                  class="validate"
+                  placeholder="Your Name Here"
+                  id="userName"
+                />
+              </div>
+
+              <div class="input-field col s6">
+                <h5>Link to Photo Image (Required)</h5>
+                <i class="material-icons prefix">picture_in_picture</i>
+                <input
+                  type="text"
+                  class="validate"
+                  placeholder="Photo Link Here"
+                  id="userPhoto"
+                />
+              </div>
+
+              <!-- Survey Questions -->
+              <div class="input-field col s12">
+                <h3>Question 1</h3>
+                <h5>
+                  Do you like cake?
+                </h5>
+                <select id="q1">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+              </div>
+
+              <div class="input-field col s12">
+                <h3>Question 2</h3>
+                <h5>
+                  Generally speaking, you like pie?
+                </h5>
+                <select id="q2">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+              </div>
+
+              <div class="input-field col s12">
+                <h3>Question 3</h3>
+                <h5>
+                  You find it easy to fill out questionaires such as this.
+                </h5>
+                <select id="q3">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+              </div>
+
+              <div class="input-field col s12">
+                <h3>Question 4</h3>
+                <h5>You partake in the proverbial "Netflix & Chill".</h5>
+                <select id="q4">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+              </div>
+
+              <div class="input-field col s12">
+                <h3>Question 5</h3>
+                <h5>Personality quizzes are useless.</h5>
+                <select id="q5">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+              </div>
+
+              <div class="input-field col s12">
+                <h3>Question 6</h3>
+                <h5>
+                  Josh takes better photos than Treighton.
+                </h5>
+                <select id="q6">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+              </div>
+
+              <div class="input-field col s12">
+                <h3>Question 7</h3>
+                <h5>
+                  In a discussion, truth should be more important than people’s
+                  sensitivities.
+                </h5>
+                <select id="q7">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+              </div>
+
+              <div class="input-field col s12">
+                <h3>Question 8</h3>
+                <h5>Sushi is better than most other foods.</h5>
+                <select id="q8">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+              </div>
+
+              <div class="input-field col s12">
+                <h3>Question 9</h3>
+                <h5>
+                  You think that everyone’s views should be respected regardless
+                  of whether they are supported by facts or not.
+                </h5>
+                <select id="q9">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+              </div>
+
+              <div class="input-field col s12">
+                <h3>Question 10</h3>
+                <h5>
+                  Do you sometimes obsess over the mask of your dead
+                  Grandfather?
+                </h5>
+                <select id="q10">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+                </select>
+              </div>
+
+              <!-- Survey Submit Button -->
+              <div>
+                <button
+                  class="btn waves-effect waves-light"
+                  type="submit"
+                  name="action"
+                  id="submitButton"
+                >
+                  Submit Responses
+                  <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer blue accent-2">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Friend Finder App</h5>
+            <p class="grey-text text-lighten-4">
+              Thank you for taking this brief survey. Your responses will be
+              used for non-commercial purposes only.
+            </p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li>
+                <a class="grey-text text-lighten-3" href="/api/friends"
+                  >API Friends List</a
+                >
+              </li>
+              <li>
+                <a
+                  class="grey-text text-lighten-3"
+                  href="https://github.com/Hippopattymus/FriendFinder"
+                  >GitHub Repo</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal Dialog Displaying Closest Friend Match -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Closest Friend Match</h4>
+        <div class="divider"></div>
+        <h5 id="userMatch"></h5>
+        <img id="userMatchImage" class="materialboxed" width="650" src="" />
+      </div>
+      <div class="modal-footer">
+        <a
+          href="/survey"
+          class="modal-action modal-close waves-effect waves-green btn-flat"
+          >Fill Again!</a
+        >
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("select").material_select();
+        $(".modal").modal({
+          dismissible: false, // Modal can be dismissed by clicking outside of the modal
+          opacity: 0.5, // Opacity of modal background
+          inDuration: 300, // Transition in duration
+          outDuration: 200, // Transition out duration
+          startingTop: "4%", // Starting top style attribute
+          endingTop: "10%" // Ending top style attribute
+        });
+      });
+      // Activate submit button
+      $("#submitButton").on("click", function(event) {
+        event.preventDefault();
+        // Gather user inputs
+        var userInput = {
+          name: $("#userName")
+            .val()
+            .trim(),
+          photo: $("#userPhoto")
+            .val()
+            .trim(),
+          scores: [
+            $("#q1")
+              .val()
+              .trim(),
+            $("#q2")
+              .val()
+              .trim(),
+            $("#q3")
+              .val()
+              .trim(),
+            $("#q4")
+              .val()
+              .trim(),
+            $("#q5")
+              .val()
+              .trim(),
+            $("#q6")
+              .val()
+              .trim(),
+            $("#q7")
+              .val()
+              .trim(),
+            $("#q8")
+              .val()
+              .trim(),
+            $("#q9")
+              .val()
+              .trim(),
+            $("#q10")
+              .val()
+              .trim()
+          ]
+        };
+
+        $.post("/api/friends", userInput).done(function(data) {
+          $("#userMatch").text(data.name);
+          $("#userMatchImage").attr("src", data.photo);
+
+          $("#modal1").modal("open");
+        });
+      });
+    </script>
+  </body>
+</html>
